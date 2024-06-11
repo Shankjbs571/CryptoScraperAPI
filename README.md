@@ -35,3 +35,10 @@ python manage.py runserver
 
 open the link in browser and interact
 
+## Django Admin Panel Screenshot
+<img src="path_to_your_screenshot.png" alt="Screenshot" style="width: 50%;"/>
+
+
+## Postman Screenshots
+<img src="path_to_your_screenshot.png" alt="Screenshot" style="width: 50%;"/>
+
