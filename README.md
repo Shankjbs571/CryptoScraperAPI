@@ -36,9 +36,16 @@ python manage.py runserver
 open the link in browser and interact
 
 ## Django Admin Panel Screenshot
-<img src="path_to_your_screenshot.png" alt="Screenshot" style="width: 50%;"/>
+<img src="https://github.com/Shankjbs571/CryptoScraperAPI/blob/main/assets/admin_panel_ss/Screenshot%20(55).png?raw=true" alt="Screenshot" />
+<img src="https://github.com/Shankjbs571/CryptoScraperAPI/blob/main/assets/admin_panel_ss/Screenshot%20(57).png?raw=true" alt="Screenshot" />
+<img src="https://github.com/Shankjbs571/CryptoScraperAPI/blob/main/assets/admin_panel_ss/Screenshot%20(59).png?raw=true" alt="Screenshot" />
+<img src="https://github.com/Shankjbs571/CryptoScraperAPI/blob/main/assets/admin_panel_ss/Screenshot%20(60).png?raw=true" alt="Screenshot" />
+<img src="https://github.com/Shankjbs571/CryptoScraperAPI/blob/main/assets/admin_panel_ss/Screenshot%20(61).png?raw=true" alt="Screenshot" />
+<img src="https://github.com/Shankjbs571/CryptoScraperAPI/blob/main/assets/admin_panel_ss/Screenshot%20(62).png?raw=true" alt="Screenshot" />
 
 
 ## Postman Screenshots
-<img src="path_to_your_screenshot.png" alt="Screenshot" style="width: 50%;"/>
+<img src="https://github.com/Shankjbs571/CryptoScraperAPI/blob/main/assets/postman_ss/Screenshot%20(63).png?raw=true" alt="Screenshot" />
+<img src="https://github.com/Shankjbs571/CryptoScraperAPI/blob/main/assets/postman_ss/Screenshot%20(64).png?raw=true" alt="Screenshot" />
+<img src="https://github.com/Shankjbs571/CryptoScraperAPI/blob/main/assets/postman_ss/Screenshot%20(65).png?raw=true" alt="Screenshot" />
 
