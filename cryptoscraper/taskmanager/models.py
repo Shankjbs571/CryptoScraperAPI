@@ -10,5 +10,5 @@ class Job(models.Model):
 class Task(models.Model):
     job = models.ForeignKey(Job, on_delete=models.CASCADE)
     coin = models.CharField(max_length=10)
-    data = models.JSONField()
+    data = models.JSONField(default='',blank=True)
     status = models.CharField(max_length=20, default='pending')
