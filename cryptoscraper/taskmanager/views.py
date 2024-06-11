@@ -12,40 +12,38 @@ class StartScraping(APIView):
     def post(self, request):
         print("inside post")
         coins = request.data.get('coins', [])
-        # Validate input
+        
+        # Validating input
         if not all(isinstance(coin, str) for coin in coins):
             return Response({'error': 'Invalid input'}, status=status.HTTP_400_BAD_REQUEST)
         
-        # # Create a new job
         job = Job.objects.create()
         
-        # # Submit tasks to Celery
         for coin in coins:
             scrape_coin_data.delay(job.job_id, coin)
         
-        # Check if all tasks for the job are completed
         while job.status != 'completed':
             if all(t.status == 'completed' for t in job.task_set.all()):
                 job.status = 'completed'
                 job.save()
         
         return Response({'status': 'Inside Try','job_iddd': job.job_id}, status=status.HTTP_200_OK)
-        
-
-
-        # except Exception as e:
-        #     print(e)
-        #     return Response({'error': 'Something went wrong'}, status=status.HTTP_400_BAD_REQUEST)
-
 
 class ScrapingStatus(APIView):
     def get(self, request, job_id):
         job = Job.objects.get(job_id=job_id)
         tasks = Task.objects.filter(job=job)
-        response_data = {
-            'job_id': job.id,
-            'tasks': [
-                {'coin': task.coin, 'data': task.data} for task in tasks
-            ]
-        }
+        if job.status == 'completed':
+            response_data = {
+                'job_id': job.job_id,
+                'tasks': [
+                    {'coin': task.coin, 'output': task.data} for task in tasks
+                ]
+            }
+        else:
+            response_data = {
+                'job_id': job.id,
+                'status' : "pending",
+            }
+
         return Response(response_data)

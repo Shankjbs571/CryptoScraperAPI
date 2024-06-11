@@ -1,3 +1,6 @@
 env
 db.sqlite3
 cryptoscraper/db.sqlite3
+cryptoscraper/taskmanager_job.csv
+cryptoscraper/taskmanager_task.csv
+cryptoscraper/db.sqlite3

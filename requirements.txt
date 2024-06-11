@@ -4,3 +4,4 @@ selenium == 4.21.0
 celery == 5.4.0
 django-celery-results == 2.5.
 redis == 5.0.5
+pyperclip == 1.8.2 

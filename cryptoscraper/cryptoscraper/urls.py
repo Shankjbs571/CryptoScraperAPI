@@ -16,9 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from taskmanager.views import StartScraping
+from taskmanager.views import StartScraping, ScrapingStatus
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/taskmanager/start_scraping', StartScraping.as_view()),
+    path('api/taskmanager/scraping_status/<str:job_id>', ScrapingStatus.as_view()),
+    
 ]
